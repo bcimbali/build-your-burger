@@ -1,0 +1,26 @@
+{
+  "name": "build-your-burger",
+  "version": "1.0.0",
+  "description": "In short, this is a restaurant app that lets users input the names of burgers they'd like to eat.  Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.  Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.  The app stores every burger in a database, whether devoured or not.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcimbali/build-your-burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcimbali/build-your-burger/issues"
+  },
+  "homepage": "https://github.com/bcimbali/build-your-burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
