@@ -1,1 +1,10 @@
 <h1>Eat Da Burger!</h1>
+
+<h2>Cats that are not sleepy!</h2>
+
+<ul>
+  {{#each burgers}}
+    <p>{{ this.burger_name }}</p>
+    <p> {{ this.devoured }} </p>
+  {{/each}}
+</ul>
