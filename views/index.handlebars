@@ -1,10 +1,46 @@
 <h1>Eat Da Burger!</h1>
 
-<h2>Cats that are not sleepy!</h2>
+<h2>Burgers that are not devoured:</h2>
 
-<ul>
+<div>
   {{#each burgers}}
-    <p>{{ this.burger_name }}</p>
-    <p> {{ this.devoured }} </p>
+    {{#unless this.devoured}}
+      <div>
+        <pre>
+          {{this.id}}. {{this.burger_name}}
+        </pre>
+      </div>
+
+      <div>
+        <form class="devour_form">
+          <input type="hidden" class="burger_id" type="text" value="{{this.id}}"><br>
+          <button type="submit" class="burger_id" data-id="{{this.id}}">Devour it!</button>
+        </form>
+      </div>
+
+    {{/unless}}
   {{/each}}
-</ul>
+</div>
+
+<h2>Burgers that are devoured:</h2>
+
+<div>
+  {{#each burgers}}
+    {{#if this.devoured}}
+      <div>
+        <pre>
+          {{this.id}}. {{this.burger_name}}
+        </pre>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>
+
+<p>Enter a burger you want to eat and click submit:</p>
+
+<div>
+  <form action="/burgers/create" method="POST">
+    <input type="text" class="form-control" name="burger_name" id="enter_text">
+    <button  type="submit" id="text-enter-button">Submit</button>
+  </form>
+</div>
