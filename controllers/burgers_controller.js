@@ -21,10 +21,11 @@ router.get("/burgers", function(req, res) {
 });
 
 router.post("/burgers/create", function(req, res) {
-  var condition = req.body.burger_name; 
+  var burgerName = req.body.burger_name; 
   console.log('condition is ------:');
-  console.log(condition);
-  burger.create("burger_name",condition, function(result) {
+  console.log(burgerName);
+  burger.create([
+    "burger_name", "devoured"],[burgerName, false], function(result) {
     console.log(result);
     res.redirect("/");
   })
