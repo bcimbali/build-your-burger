@@ -12,6 +12,16 @@ In short, this is a simple full-stack restaurant app that lets users input the n
 - Run `node server.js`
 - Open up a web browser and go to `http://localhost:8080/` (or whichever port you specify in the `server.js` file)
 
+## Screenshots
+
+![Screenshot of Build your Burger app](https://github.com/bcimbali/build-your-burger/blob/master/public/assets/img/build-your-burger-screenshot.png?raw=true)
+
+## How to Use
+
+It's easy!  Just type in the name of a burger you would like to add to the menu in the text field at the bottom, and click 'Submit.'  The non-devoured burgers will display on the left-hand side of the screen.
+
+When you want to eat the burger, click on the "Devour it!" button.  The burger will then live on the right-hand side of the screen.  That's it! Enjoy!
+
 ## Built With
 
 - HTML
