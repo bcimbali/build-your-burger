@@ -1,0 +1,12 @@
+
+.bg-diner {
+    background-image: url("./../img/diner-img.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.faded-bg {
+    background-color: rgba(245, 245, 245, 0.4);
+}

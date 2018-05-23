@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="faded-bg container">
 
   {{!-- Title box --}}
   <div class="py-4 row">
@@ -9,8 +9,9 @@
     </div>
   </div>
   
-  {{!-- Left Column --}}
+  {{!-- Row for both columns --}}
   <div class="px-4 row">
+    {{!-- Left Column --}}
     <div class="col-3 mr-auto py-4">
       {{!-- <h2>Burgers that are not devoured:</h2> --}}
       {{#each burgers}}
@@ -24,7 +25,7 @@
                 <div class="bg-white col">
                 <form class="devour_form">
                   <input type="hidden" class="burger_id" type="text" value="{{this.id}}"><br>
-                  <button type="submit" class="burger_id rounded" data-id="{{this.id}}">Devour it!</button>
+                  <button type="submit" class="btn btn-success burger_id rounded text-white" data-id="{{this.id}}">Devour it!</button>
                 </form>
                 </div>
               </div>
@@ -40,8 +41,10 @@
       {{#each burgers}}
         {{#if this.devoured}}
           <div>
-            <div class="bg-white border rounded text-center">
-              {{this.burger_name}}
+            <div class="border rounded row">
+              <div class="bg-white col h-25 py-3 text-center">
+                {{this.burger_name}}
+              </div>
             </div>
           </div>
         {{/if}}
@@ -53,10 +56,15 @@
 
   {{!-- Add a new burger section --}}
   <div class="text-center">
-    <p class="text-center">Enter a burger you want to eat and click submit:</p>
+    <p class="text-center text-white">Add a new burger to the menu and click the submit.</p>
     <form action="/burgers/create" method="POST">
       <input type="text" class="form-control mx-auto w-50" name="burger_name" id="enter_text">
-      <button class="" type="submit" id="text-enter-button">Submit</button>
+      <button class="btn btn-success my-2 rounded text-white" type="submit" id="text-enter-button">Submit</button>
     </form>
   </div>
+
+  <footer class="text-center text-white mt-4">
+            Copyright &#x24B8; 2018 Brett Cimbalik
+  </footer>
+
 </div>
