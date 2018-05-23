@@ -1,30 +1,16 @@
 $(document).ready(function() {
-    $(".devour_form").on("submit", function(event) {
-        event.preventDefault();
+    $(".devour_form").on("click", function(event) {
+        // event.preventDefault();
 
         var burger_id = $(this).children(".burger_id").val();
         // var burger_id = $(this).data("id");
         console.log(burger_id);
-        $.ajax({
-            method: "PUT",
-            url: "/burgers/" + burger_id
+        $.ajax("/burgers/" + burger_id, {
+            type: "PUT",
+            // url: "/burgers/" + burger_id
         }).then(function(data) {
+            console.log(data);
             location.reload();
-        })
+        });
     });
 });
-
-// $(document).ready(function() {
-//     $(".devour_form").on("submit", function(event) {
-//         event.preventDefault();
-
-//         var burger_id = $(this).data("id");
-//         console.log(burger_id);
-//         $.ajax({
-//             method: "PUT",
-//             url: "/burgers/" + burger_id
-//         }).then(function(data) {
-//             location.reload();
-//         })
-//     });
-// });
