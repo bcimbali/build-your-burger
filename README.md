@@ -14,7 +14,7 @@ In short, this is a simple full-stack restaurant app that lets users input the n
 
 ## Screenshots
 
-![Screenshot of Build your Burger app](https://github.com/bcimbali/build-your-burger/blob/master/public/assets/img/build-your-burger-screenshot.png?raw=true)
+![Screenshot-of-Build-your-Burger-app](https://github.com/bcimbali/build-your-burger/blob/master/public/assets/img/build-your-burger-screenshot.png?raw=true)
 
 ## How to Use
 
